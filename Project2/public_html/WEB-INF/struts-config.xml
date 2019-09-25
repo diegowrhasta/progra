@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="EnntradaForma" type="mypackage2.EnntradaForma"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="exito" path="/exito.jsp"/>
+    <forward name="falla" path="falla.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/entrada" type="mypackage2.EntradaAccion" name="EnntradaForma" input="entrada.jsp" scope="request"/>
+  </action-mappings>
+  <message-resources parameter="mypackage2.ApplicationResources"/>
+</struts-config>

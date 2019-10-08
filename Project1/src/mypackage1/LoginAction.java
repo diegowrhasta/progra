@@ -33,7 +33,6 @@ LoginForm loginForm = (LoginForm) form;
 String userid = loginForm.getUserid();
 String password = loginForm.getPassword();
 request.getSession().setAttribute("usuario",userid);
-
     ConnectDB conn =new ConnectDB ();
     ResultSet rsConsulta = null;
     try
@@ -41,7 +40,7 @@ request.getSession().setAttribute("usuario",userid);
     String cadena="select * from s_emp where userid='"+userid+"'";
     System.out.println(cadena);
     rsConsulta = conn.getData(cadena);
-    if (rsConsulta.next()){
+    if (rsConsulta.next() && userid.equals(password)){
        System.out.println(rsConsulta);
        return mapping.findForward("success");
     }

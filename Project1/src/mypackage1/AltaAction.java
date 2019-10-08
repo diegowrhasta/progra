@@ -32,7 +32,7 @@ public class AltaAction extends Action
     int cod = altaActionForm.getCod();
     String descripcion = altaActionForm.getDescripcion();
     String region = altaActionForm.getRegion();
-    ConnectDB conn =new ConnectDB ();
+    ConnectDB conn =new ConnectDB();
     ResultSet rsConsulta = null;
     try
     { 

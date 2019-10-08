@@ -19,8 +19,10 @@ DEPARTAMENTOS
 <html:text property="cod" />
 <bean:message key="descripcion.prompt" />
 <html:text property="descripcion" />
-<bean:message key="region.prompt" />
-<html:text property="region" />
+<html:select property="region">
+<html:options collection="ayuda" property="codigo" labelProperty="descr" />
+</html:select>
+
 <html:submit />
 </html:form>
 </body>

@@ -128,40 +128,44 @@ public class _alta extends oracle.jsp.runtime.HttpJsp {
             /*@lineinfo:generated-code*/
             out.write(__jsp_StaticText.text[7]);
             /*@lineinfo:translated-code*//*@lineinfo:22^1*/            {
-              org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_6=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
+              org.apache.struts.taglib.html.SelectTag __jsp_taghandler_6=(org.apache.struts.taglib.html.SelectTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SelectTag.class,"org.apache.struts.taglib.html.SelectTag property");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
-              __jsp_taghandler_6.setKey("region.prompt");
+              __jsp_taghandler_6.setProperty("region");
               __jsp_tag_starteval=__jsp_taghandler_6.doStartTag();
-              if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+              if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
+                out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_6,__jsp_tag_starteval,out);
                 do {
-                } while (__jsp_taghandler_6.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                  /*@lineinfo:generated-code*/
+                  out.write(__jsp_StaticText.text[8]);
+                  /*@lineinfo:translated-code*//*@lineinfo:23^1*/                  {
+                    org.apache.struts.taglib.html.OptionsTag __jsp_taghandler_7=(org.apache.struts.taglib.html.OptionsTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.OptionsTag.class,"org.apache.struts.taglib.html.OptionsTag collection labelProperty property");
+                    __jsp_taghandler_7.setParent(__jsp_taghandler_6);
+                    __jsp_taghandler_7.setCollection("ayuda");
+                    __jsp_taghandler_7.setLabelProperty("descr");
+                    __jsp_taghandler_7.setProperty("codigo");
+                    __jsp_tag_starteval=__jsp_taghandler_7.doStartTag();
+                    if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+                    {
+                      do {
+                      } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                    }
+                    if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                      return;
+                    OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
+                  }
+                  /*@lineinfo:generated-code*/
+                  out.write(__jsp_StaticText.text[9]);
+                /*@lineinfo:translated-code*//*@lineinfo:23^76*/                } while (__jsp_taghandler_6.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
               }
               if (__jsp_taghandler_6.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[8]);
-            /*@lineinfo:translated-code*//*@lineinfo:23^1*/            {
-              org.apache.struts.taglib.html.TextTag __jsp_taghandler_7=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
-              __jsp_taghandler_7.setParent(__jsp_taghandler_1);
-              __jsp_taghandler_7.setProperty("region");
-              __jsp_tag_starteval=__jsp_taghandler_7.doStartTag();
-              if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
-              {
-                out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_7,__jsp_tag_starteval,out);
-                do {
-                } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
-                out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
-              }
-              if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
-                return;
-              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
-            }
-            /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[9]);
-            /*@lineinfo:translated-code*//*@lineinfo:24^1*/            {
+            out.write(__jsp_StaticText.text[10]);
+            /*@lineinfo:translated-code*//*@lineinfo:26^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_8=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag");
               __jsp_taghandler_8.setParent(__jsp_taghandler_1);
               __jsp_tag_starteval=__jsp_taghandler_8.doStartTag();
@@ -177,15 +181,15 @@ public class _alta extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[10]);
-          /*@lineinfo:translated-code*//*@lineinfo:24^16*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            out.write(__jsp_StaticText.text[11]);
+          /*@lineinfo:translated-code*//*@lineinfo:26^16*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[11]);
+      out.write(__jsp_StaticText.text[12]);
 
 
     }
@@ -204,7 +208,7 @@ public class _alta extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[12][];
+    private static final char text[][]=new char[13][];
     static {
       try {
       text[0] = 
@@ -228,8 +232,10 @@ public class _alta extends oracle.jsp.runtime.HttpJsp {
       text[9] = 
       "\n".toCharArray();
       text[10] = 
-      "\n".toCharArray();
+      "\n\n".toCharArray();
       text[11] = 
+      "\n".toCharArray();
+      text[12] = 
       "\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {

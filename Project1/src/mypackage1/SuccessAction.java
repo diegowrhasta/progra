@@ -9,6 +9,13 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class SuccessAction extends Action 
 {
@@ -25,7 +32,36 @@ public class SuccessAction extends Action
     String opcion = menu.getBoton();
     if(opcion.equals("ALTA"))
     {
-      return mapping.findForward("alta"); 
+          Connection cn = null;
+          ConnectDB conn = new ConnectDB();
+          ResultSet rsConsulta = null;
+          try
+          {
+            cn = conn.conexion;
+            String cadena = "select * from s_REGION order by 1";
+            rsConsulta = conn.getData(cadena);
+            ArrayList items = new ArrayList();
+            while (rsConsulta.next())
+            {
+              ClassDep item = new ClassDep();
+              item.setCodigo(rsConsulta.getString("id"));
+              item.setDescr(rsConsulta.getString("name"));
+              items.add(item);
+              System.out.println("Paso ..");
+          }  
+          request.getSession().setAttribute("ayuda",items);
+          return mapping.findForward("alta");
+        }
+	
+          catch(Exception e)
+          {
+            e.printStackTrace();
+            return (mapping.findForward("failure"));
+          }
+          finally
+          {
+            conn.closeConnection();	
+          }
     }
     if(opcion.equals("BAJA"))
     {

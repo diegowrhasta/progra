@@ -75,6 +75,9 @@
          <URL path="public_html/InsertadoMal.jsp"/>
          <encoding>windows-1252</encoding>
       </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage1/ClassDep.java"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>
@@ -184,7 +187,7 @@
                      <Value class="oracle.jdevimpl.config.JProjectLibraries">
                         <jdkName>1.3.1_02</jdkName>
                         <jdkVersionNumber>1.3.1_02</jdkVersionNumber>
-                        <libraries>JDeveloper Runtime;JSP Runtime;Struts Runtime;Servlet Runtime;Oracle JDBC</libraries>
+                        <libraries>JDeveloper Runtime;JSP Runtime;Struts Runtime;Servlet Runtime;Oracle JDBC;Connection Manager</libraries>
                      </Value>
                   </Item>
                   <Item>

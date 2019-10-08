@@ -17,7 +17,7 @@ import oracle.jdbc.*;
 import java.util.*;
 
 
-public class LoginAction extends Action 
+public class AltaAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -27,36 +27,31 @@ public class LoginAction extends Action
    * @param response The HTTP Response we are processing.
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
-{
-System.out.println("validating user"); 
-LoginForm loginForm = (LoginForm) form;
-String userid = loginForm.getUserid();
-String password = loginForm.getPassword();
-request.getSession().setAttribute("usuario",userid);
-
+  {
+    AltaActionForm altaActionForm = (AltaActionForm) form;
+    int cod = altaActionForm.getCod();
+    String descripcion = altaActionForm.getDescripcion();
+    String region = altaActionForm.getRegion();
     ConnectDB conn =new ConnectDB ();
     ResultSet rsConsulta = null;
     try
-    {
-    String cadena="select * from s_emp where userid='"+userid+"'";
+    { 
+    String cadena = "insert into s_dept values ("+cod+",'"+descripcion+"',"+region+")";
     System.out.println(cadena);
-    rsConsulta = conn.getData(cadena);
-    if (rsConsulta.next()){
-       System.out.println(rsConsulta);
-       return mapping.findForward("success");
-    }
-    else{
-       return mapping.findForward("failure");
-    }
-    }
-    catch(Exception e)
-    {
-      e.printStackTrace();
-      return (mapping.findForward("failure"));
-    }
+         int a = conn.InsertaDatos(cadena);
+        
+         return mapping.findForward("goodinsert");
+	      }
+	
+        catch(Exception e)
+       {
+          e.printStackTrace();
+          return (mapping.findForward("badinsert"));
+       }
+       
     finally
     {
-    conn.closeConnection();	
+      conn.closeConnection();	
     }
   }
 }

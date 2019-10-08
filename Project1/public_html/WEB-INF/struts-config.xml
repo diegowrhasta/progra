@@ -4,6 +4,7 @@
   <form-beans>
     <form-bean name="LoginForm" type="mypackage1.LoginForm"/>
     <form-bean name="SucessActionForm" type="mypackage1.SuccessActionForm"/>
+    <form-bean name="AltaActionForm" type="mypackage1.AltaActionForm"/>
   </form-beans>
   <global-forwards>
     <forward name="success" path="/success.jsp"/>
@@ -11,10 +12,13 @@
     <forward name="alta" path="/alta.jsp"/>
     <forward name="baja" path="/baja.jsp"/>
     <forward name="modificacion" path="/modificacion.jsp"/>
+    <forward name="goodinsert" path="/InsertadoBien.jsp"/>
+    <forward name="badinsert" path="/InsertadoMal.jsp"/>
   </global-forwards>
   <action-mappings>
     <action path="/login" type="mypackage1.LoginAction" name="LoginForm" input="login.jsp" scope="request"/>
     <action path="/menu" type="mypackage1.SuccessAction" name="SucessActionForm" input="success.jsp" scope="request"/>
+    <action path="/altadep" type="mypackage1.AltaAction" name="AltaActionForm" scope="request"/>
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>
 </struts-config>

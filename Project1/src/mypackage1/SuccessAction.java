@@ -65,7 +65,31 @@ public class SuccessAction extends Action
     }
     if(opcion.equals("BAJA"))
     {
+        Connection cn = null;
+        ConnectDB conn = new ConnectDB();
+        ResultSet rsConsulta = null;
+        String cadena = "select id,name from s_dept order by 1";
+        rsConsulta = conn.getData(cadena);
+        ArrayList items = new ArrayList();
+        try
+        {
+          while (rsConsulta.next())
+        {
+          ClassDep item = new ClassDep();
+          item.setCodigo(rsConsulta.getString("id"));
+          item.setDescr(rsConsulta.getString("name"));
+          items.add(item);
+      }  
+      BajaForm f = new BajaForm();
+      f.setTabla(items);
+      request.getSession().setAttribute("bajas",f);
       return mapping.findForward("baja");
+        }
+        catch(Exception e)
+        {
+          e.printStackTrace();
+          return (mapping.findForward("failure"));
+        }
     }
     else
     {

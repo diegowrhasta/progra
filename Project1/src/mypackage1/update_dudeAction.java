@@ -16,7 +16,7 @@ import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
 
-public class BajaAction extends Action 
+public class update_dudeAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -27,16 +27,19 @@ public class BajaAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-      BajaForm bajaForm = (BajaForm) form;
-      String codigo = bajaForm.getCodigo();
-      System.out.println(codigo);
-      ConnectDB conn =new ConnectDB();
-       try
-      { 
-      String cadena = "delete from s_dept where id="+codigo;
-      System.out.println(cadena);
+    update_dudeForm update_dudeForm = (update_dudeForm) form;
+    String id = update_dudeForm.getId();
+    String name = update_dudeForm.getName();
+    String region_id = update_dudeForm.getRegion_id();
+    System.out.println("id: "+id+" name: "+name+" region: "+region_id);
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+    try
+    { 
+    String cadena = "update s_dept set name="+name+", region_id="+region_id+" where id="+id; 
+    System.out.println(cadena);
          int a = conn.InsertaDatos(cadena);
-          
+         System.out.println("GOOD");
          return mapping.findForward("success");
 	      }
 	

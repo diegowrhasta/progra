@@ -77,7 +77,6 @@ public class SuccessAction extends Action
         {
           ClassDep item = new ClassDep();
           item.setCodigo(rsConsulta.getString("id"));
-          item.setDescr(rsConsulta.getString("name"));
           items.add(item);
       }  
       BajaForm f = new BajaForm();
@@ -93,7 +92,35 @@ public class SuccessAction extends Action
     }
     else
     {
-      return mapping.findForward("modificacion");
+          Connection cn = null;
+          ConnectDB conn = new ConnectDB();
+          ResultSet rsConsulta = null;
+          try
+          {
+            cn = conn.conexion;
+            String cadena = "select id from s_dept order by 1";
+            rsConsulta = conn.getData(cadena);
+            ArrayList items = new ArrayList();
+            while (rsConsulta.next())
+            {
+              ClassDep item = new ClassDep();
+              item.setCodigo(rsConsulta.getString("id"));
+              items.add(item);
+              System.out.println("Paso ..");
+          }  
+          request.getSession().setAttribute("ayuda",items);
+          return mapping.findForward("modificacion");
+        }
+	
+          catch(Exception e)
+          {
+            e.printStackTrace();
+            return (mapping.findForward("failure"));
+          }
+          finally
+          {
+            conn.closeConnection();	
+          }
     }
   }
 }

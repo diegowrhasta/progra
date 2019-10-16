@@ -39,7 +39,7 @@ public class AltaAction extends Action
     String cadena = "insert into s_dept values ("+cod+",'"+descripcion+"',"+region+")";
     System.out.println(cadena);
          int a = conn.InsertaDatos(cadena);
-        
+          
          return mapping.findForward("goodinsert");
 	      }
 	

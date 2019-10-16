@@ -6,6 +6,8 @@
     <form-bean name="SucessActionForm" type="mypackage1.SuccessActionForm"/>
     <form-bean name="AltaActionForm" type="mypackage1.AltaActionForm"/>
     <form-bean name="BajaForm" type="mypackage1.BajaForm"/>
+    <form-bean name="ModificacionForm" type="mypackage1.ModificacionForm"/>
+    <form-bean name="update_dudeForm" type="mypackage1.update_dudeForm"/>
   </form-beans>
   <global-forwards>
     <forward name="success" path="/success.jsp"/>
@@ -15,12 +17,15 @@
     <forward name="modificacion" path="/modificacion.jsp"/>
     <forward name="goodinsert" path="/InsertadoBien.jsp"/>
     <forward name="badinsert" path="/InsertadoMal.jsp"/>
+    <forward name="modify_selected_dept" path="/modify_selected_dept.jsp"/>
   </global-forwards>
   <action-mappings>
     <action path="/login" type="mypackage1.LoginAction" name="LoginForm" input="login.jsp" scope="request"/>
     <action path="/menu" type="mypackage1.SuccessAction" name="SucessActionForm" input="success.jsp" scope="request"/>
     <action path="/altadep" type="mypackage1.AltaAction" name="AltaActionForm" scope="request"/>
     <action path="/baja" type="mypackage1.BajaAction" name="BajaForm" scope="request"/>
+    <action path="/modificacion" type="mypackage1.ModificacionAction" name="ModificacionForm" scope="request"/>
+    <action path="/update_dude" type="mypackage1.update_dudeAction" name="update_dudeForm" scope="request"/>
   </action-mappings>
   <message-resources parameter="mypackage1.ApplicationResources"/>
 </struts-config>

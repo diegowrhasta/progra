@@ -18,7 +18,9 @@ BAJA
 <logic:iterate id="tabla" indexId="index" name="bajas" property="tabla">
 <tr>
 <td>
+<html:submit property="codigo">
 <bean:write name="tabla" property="codigo" />
+</html:submit>
 </td>
 <td>
 <bean:write name="tabla" property="descr" />

@@ -16,7 +16,7 @@ import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
 
-public class BajaAction extends Action 
+public class ModificacionAction extends Action 
 {
   /**
    * This is the main action called from the Struts framework.
@@ -27,25 +27,37 @@ public class BajaAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-      BajaForm bajaForm = (BajaForm) form;
-      String codigo = bajaForm.getCodigo();
-      System.out.println(codigo);
-      ConnectDB conn =new ConnectDB();
-       try
+    ModificacionForm modificacionForm = (ModificacionForm) form;
+    String codigo = modificacionForm.getCodigo();
+    System.out.println(codigo);
+    
+    ConnectDB conn =new ConnectDB ();
+    ResultSet rsConsulta = null;
+     try
       { 
-      String cadena = "delete from s_dept where id="+codigo;
-      System.out.println(cadena);
-         int a = conn.InsertaDatos(cadena);
-          
-         return mapping.findForward("success");
+        String cadena="select * from s_dept where id="+codigo;
+        System.out.println(cadena);
+        rsConsulta = conn.getData(cadena);
+        if(rsConsulta.next()){
+        String id = rsConsulta.getString("id");
+        String name = rsConsulta.getString("name");
+        String region = rsConsulta.getString("region_id");
+        System.out.println("id: "+id+" name: "+name+" region: "+region);
+        request.getSession().setAttribute("dept_id",id);
+        request.getSession().setAttribute("dept_name",name);
+        request.getSession().setAttribute("dept_region",region);
+        return mapping.findForward("modify_selected_dept");
+        }
+      else{
+        System.out.println("NOPE");
+        return mapping.findForward("success");
+      }     
 	      }
-	
         catch(Exception e)
        {
           e.printStackTrace();
           return (mapping.findForward("success"));
        }
-       
     finally
     {
       conn.closeConnection();	

@@ -79,40 +79,60 @@ public class _baja extends oracle.jsp.runtime.HttpJsp {
                   /*@lineinfo:generated-code*/
                   out.write(__jsp_StaticText.text[5]);
                   /*@lineinfo:translated-code*//*@lineinfo:21^1*/                  {
-                    org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_3=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
+                    org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_3=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag property");
                     __jsp_taghandler_3.setParent(__jsp_taghandler_2);
-                    __jsp_taghandler_3.setName("tabla");
                     __jsp_taghandler_3.setProperty("codigo");
                     __jsp_tag_starteval=__jsp_taghandler_3.doStartTag();
-                    if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+                    if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
                     {
+                      out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_3,__jsp_tag_starteval,out);
                       do {
-                      } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                        /*@lineinfo:generated-code*/
+                        out.write(__jsp_StaticText.text[6]);
+                        /*@lineinfo:translated-code*//*@lineinfo:22^1*/                        {
+                          org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_4=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
+                          __jsp_taghandler_4.setParent(__jsp_taghandler_3);
+                          __jsp_taghandler_4.setName("tabla");
+                          __jsp_taghandler_4.setProperty("codigo");
+                          __jsp_tag_starteval=__jsp_taghandler_4.doStartTag();
+                          if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+                          {
+                            do {
+                            } while (__jsp_taghandler_4.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                          }
+                          if (__jsp_taghandler_4.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                            return;
+                          OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
+                        }
+                        /*@lineinfo:generated-code*/
+                        out.write(__jsp_StaticText.text[7]);
+                      /*@lineinfo:translated-code*//*@lineinfo:22^46*/                      } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                      out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
                     }
                     if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                       return;
                     OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
                   }
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[6]);
-                  /*@lineinfo:translated-code*//*@lineinfo:24^1*/                  {
-                    org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_4=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
-                    __jsp_taghandler_4.setParent(__jsp_taghandler_2);
-                    __jsp_taghandler_4.setName("tabla");
-                    __jsp_taghandler_4.setProperty("descr");
-                    __jsp_tag_starteval=__jsp_taghandler_4.doStartTag();
+                  out.write(__jsp_StaticText.text[8]);
+                  /*@lineinfo:translated-code*//*@lineinfo:26^1*/                  {
+                    org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_5=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
+                    __jsp_taghandler_5.setParent(__jsp_taghandler_2);
+                    __jsp_taghandler_5.setName("tabla");
+                    __jsp_taghandler_5.setProperty("descr");
+                    __jsp_tag_starteval=__jsp_taghandler_5.doStartTag();
                     if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
                     {
                       do {
-                      } while (__jsp_taghandler_4.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                      } while (__jsp_taghandler_5.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                     }
-                    if (__jsp_taghandler_4.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                    if (__jsp_taghandler_5.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                       return;
-                    OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
+                    OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
                   }
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[7]);
-                /*@lineinfo:translated-code*//*@lineinfo:24^45*/                } while (__jsp_taghandler_2.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+                  out.write(__jsp_StaticText.text[9]);
+                /*@lineinfo:translated-code*//*@lineinfo:26^45*/                } while (__jsp_taghandler_2.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
               }
               if (__jsp_taghandler_2.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
@@ -120,15 +140,15 @@ public class _baja extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[8]);
-          /*@lineinfo:translated-code*//*@lineinfo:27^17*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+            out.write(__jsp_StaticText.text[10]);
+          /*@lineinfo:translated-code*//*@lineinfo:29^17*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
           return;
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[9]);
+      out.write(__jsp_StaticText.text[11]);
 
 
     }
@@ -147,7 +167,7 @@ public class _baja extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[10][];
+    private static final char text[][]=new char[12][];
     static {
       try {
       text[0] = 
@@ -163,12 +183,16 @@ public class _baja extends oracle.jsp.runtime.HttpJsp {
       text[5] = 
       "\n<tr>\n<td>\n".toCharArray();
       text[6] = 
-      "\n</td>\n<td>\n".toCharArray();
+      "\n".toCharArray();
       text[7] = 
-      "\n</td>\n</tr>\n".toCharArray();
+      "\n".toCharArray();
       text[8] = 
-      "\n</table>\n".toCharArray();
+      "\n</td>\n<td>\n".toCharArray();
       text[9] = 
+      "\n</td>\n</tr>\n".toCharArray();
+      text[10] = 
+      "\n</table>\n".toCharArray();
+      text[11] = 
       "\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {

@@ -1,3 +1,4 @@
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ page contentType="text/html;charset=windows-1252"%>
 <html>
 <head>
@@ -10,5 +11,11 @@ Hello World
 <h2>
 MODIFICACIÓN
 </h2>
+<html:form action="/modificacion">
+<html:select property="codigo">
+<html:options collection="ayuda" property="codigo"/>
+</html:select>
+<html:submit />
+</html:form>
 </body>
 </html>

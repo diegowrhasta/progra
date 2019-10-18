@@ -36,7 +36,7 @@ public class update_dudeAction extends Action
     ResultSet rsConsulta = null;
     try
     { 
-    String cadena = "update s_dept set name="+name+", region_id="+region_id+" where id="+id; 
+    String cadena = "update s_dept set name="+"'"+name+"'"+", region_id="+region_id+" where id="+id; 
     System.out.println(cadena);
          int a = conn.InsertaDatos(cadena);
          System.out.println("GOOD");

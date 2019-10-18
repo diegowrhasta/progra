@@ -42,7 +42,7 @@ public class ModificacionAction extends Action
         String id = rsConsulta.getString("id");
         String name = rsConsulta.getString("name");
         String region = rsConsulta.getString("region_id");
-        System.out.println("id: "+id+" name: "+name+" region: "+region);
+        System.out.println("id: "+id+" name: "+"'"+name+"'"+" region: "+region);
         request.getSession().setAttribute("dept_id",id);
         request.getSession().setAttribute("dept_name",name);
         request.getSession().setAttribute("dept_region",region);

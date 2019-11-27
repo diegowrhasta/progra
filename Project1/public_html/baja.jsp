@@ -4,6 +4,9 @@
 <%@ page contentType="text/html;charset=windows-1252"%>
 <html>
 <head>
+<script language="JavaScript" src="jscript/jquery.js"></script>
+<script language="JavaScript" src="jscript/lbajas.js"></script>
+<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>
 Hello World
@@ -14,7 +17,7 @@ Hello World
 BAJA
 </h2>
 <html:form action="/baja">
-<table border=1 width="100%" height="100%">
+<table class="lista" border=1 width="100%" height="100%">
 <logic:iterate id="tabla" indexId="index" name="bajas" property="tabla">
 <tr>
 <td>

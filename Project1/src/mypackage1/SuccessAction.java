@@ -106,7 +106,6 @@ public class SuccessAction extends Action
             {
               ClassDep item = new ClassDep();
               item.setCodigo(rsConsulta.getString("id"));
-              item.setDescr(rsConsulta.getString("name"));
               items.add(item);
               System.out.println("Paso ..");
           }  

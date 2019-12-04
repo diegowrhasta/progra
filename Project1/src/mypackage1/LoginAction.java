@@ -28,11 +28,11 @@ public class LoginAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
 {
-System.out.println("validating user"); 
-LoginForm loginForm = (LoginForm) form;
-String userid = loginForm.getUserid();
-String password = loginForm.getPassword();
-request.getSession().setAttribute("usuario",userid);
+  System.out.println("validating user"); 
+  LoginForm loginForm = (LoginForm) form;
+  String userid = loginForm.getUserid();
+  String password = loginForm.getPassword();
+  request.getSession().setAttribute("usuario",userid);
     ConnectDB conn =new ConnectDB ();
     ResultSet rsConsulta = null;
     try

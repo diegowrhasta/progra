@@ -180,7 +180,7 @@ public class _login extends com.orionserver.http.OrionHttpJspPage {
       text[1] = 
       "\r\n<html>\r\n<head>\r\n<link rel=\"stylesheet\" href=\"css/estilos.css\" type=\"text/css\"/>\r\n</head>\r\n<body>\r\n\r\n".getBytes("ISO8859_1");
       text[2] = 
-      "\r\n<table width=\"350\" align=\"center\" class=\"boxdetail\">\r\n<tr>\r\n<tr>\r\n    <td colspan=\"2\" align=\"center\" class=\"boxhead\">Ingreso</td>\r\n</tr>\r\n<td>".getBytes("ISO8859_1");
+      "\r\n<table width=\"350\" align=\"center\" class=\"boxdetail\">\r\n<tr>\r\n<tr>\r\n    <td colspan=\"2\" align=\"center\" class=\"boxhead\">Ingreso al Sistema</td>\r\n</tr>\r\n<td>".getBytes("ISO8859_1");
       text[3] = 
       " :</td>\r\n<td>".getBytes("ISO8859_1");
       text[4] = 

@@ -10,7 +10,7 @@
 <table width="350" align="center" class="boxdetail">
 <tr>
 <tr>
-    <td colspan="2" align="center" class="boxhead">Ingreso</td>
+    <td colspan="2" align="center" class="boxhead">Ingreso al Sistema</td>
 </tr>
 <td><bean:message key="userid.prompt" /> :</td>
 <td><html:text property="userid" /></td>
